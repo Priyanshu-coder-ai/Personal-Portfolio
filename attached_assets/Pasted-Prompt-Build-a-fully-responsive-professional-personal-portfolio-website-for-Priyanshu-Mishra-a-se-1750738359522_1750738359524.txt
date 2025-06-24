@@ -1,0 +1,144 @@
+Prompt:
+Build a fully responsive, professional personal portfolio website for Priyanshu Mishra, a self-taught full-stack developer currently pursuing a B.Com degree. This site will be hosted on Replit and should showcase his skills, live projects, education, experience, and contact details — with a clean, modern UI and smooth animations.
+
+🧱 Sections to Include:
+1. 🏠 Home
+Tagline:
+
+“Hi, I’m Priyanshu — I build websites, apps, and sometimes memes.”
+
+Subtitle:
+
+“Full-Stack Developer | B.Com Final Year Student”
+
+CTA buttons: View Projects · Download Resume · Contact Me
+
+2. 👨‍💻 About Me
+Brief description:
+
+I’m a developer with a background in commerce and a passion for coding. I’ve built multiple real-world projects using React, Node.js, MongoDB, and more. I enjoy creating things that are both functional and fun — from chatbots to meme tools.
+
+Highlights:
+
+Currently pursuing B.Com (Final Year) from DU SOL
+
+Learning full-stack development from an institute
+
+Experience in building full-stack apps and personal tools
+
+Interests: Web Dev, UI/UX, Creative Building
+
+3. 🎓 Education
+Bachelor of Commerce (B.Com)
+
+University: Delhi University – School of Open Learning
+
+Status: Final Year
+
+Full-Stack Development Program
+
+HTML, CSS, JavaScript, React, Node.js, MongoDB, Firebase, Git, Vercel
+
+4. 🛠️ Skills
+Frontend
+
+HTML, CSS, JavaScript, React
+
+Tailwind CSS
+
+Backend
+
+Node.js, Express.js
+
+MongoDB, Firebase (used in past projects)
+
+PHP (basic)
+
+Tools & Platforms
+
+VS Code, Git, GitHub, Replit, Vercel
+
+APIs & Extras
+
+Gemini API, OpenAI API, Weather APIs
+
+Soft Skills
+
+Problem-solving, self-learning, project building from scratch
+
+5. 🚀 Projects
+Meme Studio
+
+A live meme posting and organizing app to manage, schedule, and share memes.
+
+Tech: React, Firebase, CSS, GitHub
+
+Live
+
+Weather App Kaii
+
+A real-time weather app with clean UI.
+
+Tech: React, CSS, Weather API
+
+Live
+
+AI Chatbox – Kaii
+
+A custom chatbot powered by the Gemini API.
+
+Tech: React, Node.js, Express, Gemini API
+
+Features dark mode and clean UI
+
+Meme Organizer Chrome Extension (In Progress)
+
+Chrome extension to collect, tag, and save memes
+
+Tech: HTML, CSS, JS
+
+Car Rental + Hotel Listing App (Java - Dropwizard)
+
+Java project using Dropwizard + Maven, simulating a car and hotel listing system
+
+Tech: Java, Dropwizard, OpenJDK 19
+
+6. 💼 Experience
+Independent Developer (2024–Present)
+
+Working on personal projects using modern web tech
+Familiar with project deployment, Git workflows, and API integration
+
+7. 📩 Contact
+Email: priyanshumishra4070@gmail.com
+
+GitHub: @Priyanshu-coder-ai
+
+Add a contact form with name/email/message
+
+Optional: Social links, YouTube meme channel
+
+8. 🔚 Footer
+“Made with 💻 by Priyanshu Mishra”
+
+Fun line:
+
+“Ctrl + Z is my therapy.”
+
+Simple nav + copyright
+
+🎨 UI / UX Suggestions:
+Dark/Light mode toggle with semi-circle switch
+
+Smooth scroll animations (Framer Motion or AOS if needed)
+
+Mobile-first design using Flexbox or CSS Grid
+
+Fonts: Inter, Poppins, or JetBrains Mono for a dev vibe
+
+⚙️ Dev Stack (Replit-Friendly):
+HTML, CSS, JavaScript (or React with Replit's React template)
+
+Optional: Tailwind CSS or plain CSS modules
+
+Deploy via Replit’s built-in hosting
