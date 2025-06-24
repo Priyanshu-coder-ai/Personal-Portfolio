@@ -1,46 +1,46 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { z } from "zod";
-
-const contactSchema = z.object({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().email("Valid email is required"),
-  message: z.string().min(1, "Message is required")
-});
+import { insertContactMessageSchema } from "@shared/schema";
+import { storage } from "./storage";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form endpoint
   app.post("/api/contact", async (req, res) => {
     try {
-      const { name, email, message } = contactSchema.parse(req.body);
+      const contactData = insertContactMessageSchema.parse(req.body);
       
-      // TODO: Implement email sending logic here
-      // For now, just log the contact form submission
-      console.log("Contact form submission:", { name, email, message });
-      
-      // In a real implementation, you would use a service like:
-      // - Nodemailer to send emails
-      // - SendGrid API
-      // - Mailgun API
-      // - Or save to database for manual follow-up
+      // Save contact message to database
+      const savedMessage = await storage.createContactMessage(contactData);
+      console.log("Contact form submission saved:", savedMessage);
       
       res.json({ 
         success: true, 
-        message: "Contact form submitted successfully" 
+        message: "Contact form submitted successfully",
+        id: savedMessage.id
       });
     } catch (error) {
-      if (error instanceof z.ZodError) {
-        res.status(400).json({ 
-          success: false, 
-          message: "Validation error",
-          errors: error.errors 
-        });
-      } else {
-        res.status(500).json({ 
-          success: false, 
-          message: "Internal server error" 
-        });
-      }
+      console.error("Contact form error:", error);
+      res.status(500).json({ 
+        success: false, 
+        message: "Failed to save contact message" 
+      });
+    }
+  });
+
+  // Get contact messages endpoint (for admin use)
+  app.get("/api/contact", async (req, res) => {
+    try {
+      const messages = await storage.getContactMessages();
+      res.json({ 
+        success: true, 
+        messages 
+      });
+    } catch (error) {
+      console.error("Get contact messages error:", error);
+      res.status(500).json({ 
+        success: false, 
+        message: "Failed to retrieve contact messages" 
+      });
     }
   });
 
