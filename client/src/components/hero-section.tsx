@@ -1,4 +1,6 @@
 import { Download, ExternalLink, Mail } from "lucide-react";
+// Add your profile photo import here:
+// import profilePhoto from "@/assets/profile.jpg";
 
 export function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -21,7 +23,14 @@ export function HeroSection() {
     <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
       <div className="max-w-4xl mx-auto text-center animate-fade-in">
         <div className="mb-6">
-          {/* Profile image placeholder with gradient background */}
+          {/* Option 1: Your profile photo */}
+          {/* <img 
+            src={profilePhoto} 
+            alt="Priyanshu Mishra" 
+            className="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-xl animate-float"
+          /> */}
+          
+          {/* Option 2: Keep gradient with your initial */}
           <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-full bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center text-white text-6xl font-bold animate-float">
             P
           </div>
