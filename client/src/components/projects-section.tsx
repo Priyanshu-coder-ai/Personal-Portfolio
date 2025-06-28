@@ -1,11 +1,13 @@
 import { ExternalLink, Github, Clock, Laugh, CloudSun, Bot, Chrome } from "lucide-react";
 import { SiOpenjdk } from "react-icons/si";
+import placeholderImage from "@/assets/projects/placeholder.svg";
 
 export function ProjectsSection() {
   const projects = [
     {
       title: "Meme Studio",
       description: "A live meme posting and organizing app to manage, schedule, and share memes.",
+      image: placeholderImage, // Replace with your actual screenshot
       icon: <Laugh className="text-6xl text-white" />,
       gradient: "from-pink-400 to-red-500",
       technologies: [
@@ -19,6 +21,7 @@ export function ProjectsSection() {
     {
       title: "Weather App Kaii",
       description: "A real-time weather app with clean UI providing accurate weather information.",
+      image: placeholderImage, // Replace with your actual screenshot
       icon: <CloudSun className="text-6xl text-white" />,
       gradient: "from-blue-400 to-cyan-500",
       technologies: [
@@ -32,6 +35,7 @@ export function ProjectsSection() {
     {
       title: "AI Chatbox – Kaii",
       description: "A custom chatbot powered by the Gemini API with dark mode and clean UI.",
+      image: placeholderImage, // Replace with your actual screenshot
       icon: <Bot className="text-6xl text-white" />,
       gradient: "from-purple-400 to-pink-500",
       technologies: [
@@ -45,6 +49,7 @@ export function ProjectsSection() {
     {
       title: "Meme Organizer Extension",
       description: "Chrome extension to collect, tag, and save memes (In Progress).",
+      image: placeholderImage, // Replace with your actual screenshot
       icon: <Chrome className="text-6xl text-white" />,
       gradient: "from-yellow-400 to-orange-500",
       technologies: [
@@ -58,6 +63,7 @@ export function ProjectsSection() {
     {
       title: "Car Rental + Hotel App",
       description: "Java project using Dropwizard + Maven, simulating a car and hotel listing system.",
+      image: placeholderImage, // Replace with your actual screenshot
       icon: <SiOpenjdk className="text-6xl text-white" />,
       gradient: "from-red-400 to-pink-500",
       technologies: [
@@ -78,8 +84,18 @@ export function ProjectsSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="project-card zoom-column bg-slate-50 dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
-              <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
-                {project.icon}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={`${project.title} screenshot`}
+                  className="w-full h-full object-cover"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20`}></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-black bg-opacity-30 p-3 rounded-full">
+                    {project.icon}
+                  </div>
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="font-poppins font-semibold text-xl mb-2">{project.title}</h3>
