@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useTheme } from "@/components/theme-provider";
 import { Menu, X } from "lucide-react";
+// Add your logo import here:
+// import logoImage from "@/assets/logo.png";
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,8 +24,14 @@ export function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 glass-effect bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-700">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="font-poppins font-bold text-xl gradient-text">
-            PM
+          <div className="flex items-center">
+            {/* Option 1: Use your logo image */}
+            {/* <img src={logoImage} alt="Logo" className="h-8 w-auto" /> */}
+            
+            {/* Option 2: Keep text logo - replace "PM" with your text */}
+            <div className="font-poppins font-bold text-xl gradient-text">
+              PM
+            </div>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
