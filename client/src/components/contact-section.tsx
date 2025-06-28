@@ -68,10 +68,10 @@ export function ContactSection() {
                 <div>
                   <h4 className="font-medium">Email</h4>
                   <a 
-                    href="mailto:priyanshumishra4070@gmail.com" 
+                    href="mailto:priyanshumishra9873@gmail.com" 
                     className="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors duration-200"
                   >
-                    priyanshumishra4070@gmail.com
+                    priyanshumishra9873@gmail.com
                   </a>
                 </div>
               </div>
@@ -93,7 +93,7 @@ export function ContactSection() {
                 </div>
               </div>
               
-              <div className="flex items-center space-x-4">
+              {/* <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-lg flex items-center justify-center">
                   <Youtube className="text-red-500 text-lg" />
                 </div>
@@ -101,7 +101,7 @@ export function ContactSection() {
                   <h4 className="font-medium">YouTube</h4>
                   <p className="text-slate-600 dark:text-slate-400">Meme Channel (Coming Soon)</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           

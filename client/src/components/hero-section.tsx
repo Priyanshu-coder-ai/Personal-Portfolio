@@ -1,4 +1,5 @@
 import { Download, ExternalLink, Mail } from "lucide-react";
+import resumePdf from "@/assets/resume.pdf";
 // Add your profile photo import here:
 // import profilePhoto from "@/assets/profile.jpg";
 
@@ -15,9 +16,13 @@ export function HeroSection() {
   };
 
   const downloadResume = () => {
-    // TODO: Replace with actual resume file URL
-    alert('Resume download will be available soon!');
-  };
+  const link = document.createElement('a');
+  link.href = resumePdf;
+  link.download = 'Priyanshu_Mishra_Resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">

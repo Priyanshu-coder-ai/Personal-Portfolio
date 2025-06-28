@@ -1,13 +1,16 @@
 import { ExternalLink, Github, Clock, Laugh, CloudSun, Bot, Chrome } from "lucide-react";
 import { SiOpenjdk } from "react-icons/si";
-import placeholderImage from "@/assets/projects/placeholder.svg";
+import memeStudioImage from "@/assets/projects/meme-studio.png";
+import weatherAppImage from "@/assets/projects/weather-app.png";
+import aiChatbotImage from "@/assets/projects/ai-chatbot.png";
+import aiTextGen from "@/assets/projects/ai-text-gen.png";
 
 export function ProjectsSection() {
   const projects = [
     {
       title: "Meme Studio",
-      description: "A live meme posting and organizing app to manage, schedule, and share memes.",
-      image: placeholderImage, // Replace with your actual screenshot
+      description: "A live meme organizing and saving website/app to manage, download, and share memes.",
+      image: memeStudioImage,
       icon: <Laugh className="text-6xl text-white" />,
       gradient: "from-pink-400 to-red-500",
       technologies: [
@@ -21,7 +24,7 @@ export function ProjectsSection() {
     {
       title: "Weather App Kaii",
       description: "A real-time weather app with clean UI providing accurate weather information.",
-      image: placeholderImage, // Replace with your actual screenshot
+      image: weatherAppImage,
       icon: <CloudSun className="text-6xl text-white" />,
       gradient: "from-blue-400 to-cyan-500",
       technologies: [
@@ -35,7 +38,7 @@ export function ProjectsSection() {
     {
       title: "AI Chatbox – Kaii",
       description: "A custom chatbot powered by the Gemini API with dark mode and clean UI.",
-      image: placeholderImage, // Replace with your actual screenshot
+      image: aiChatbotImage,
       icon: <Bot className="text-6xl text-white" />,
       gradient: "from-purple-400 to-pink-500",
       technologies: [
@@ -47,32 +50,31 @@ export function ProjectsSection() {
       status: "live"
     },
     {
-      title: "Meme Organizer Extension",
-      description: "Chrome extension to collect, tag, and save memes (In Progress).",
-      image: placeholderImage, // Replace with your actual screenshot
+      title: "Prompt2Text",
+      description: "Generate images from prompts and text using the Gemini API with a clean UI and dark mode.",
+      image: aiTextGen,
       icon: <Chrome className="text-6xl text-white" />,
       gradient: "from-yellow-400 to-orange-500",
       technologies: [
-        { name: "HTML", color: "bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200" },
-        { name: "CSS", color: "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200" },
-        { name: "JavaScript", color: "bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200" }
+        { name: "Next.js", color: "bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200" },
+        { name: "Talwind CSS", color: "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200" },
+        { name: "Google Ai", color: "bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200" }
       ],
       hasLiveDemo: false,
-      status: "in-progress"
+      status: "live"
     },
     {
-      title: "Car Rental + Hotel App",
-      description: "Java project using Dropwizard + Maven, simulating a car and hotel listing system.",
-      image: placeholderImage, // Replace with your actual screenshot
+      title: "Aureus AI",
+      description: "Your golden gateway to text and image generation.",
       icon: <SiOpenjdk className="text-6xl text-white" />,
       gradient: "from-red-400 to-pink-500",
       technologies: [
-        { name: "Java", color: "bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200" },
-        { name: "Dropwizard", color: "bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200" },
-        { name: "Maven", color: "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200" }
+        { name: "TypeScript", color: "bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200" },
+        { name: "OpenApi", color: "bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200" },
+        { name: "Unknown", color: "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200" }
       ],
       hasLiveDemo: false,
-      status: "completed"
+      status: "in-progress"
     }
   ];
 
@@ -84,18 +86,8 @@ export function ProjectsSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="project-card zoom-column bg-slate-50 dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={`${project.title} screenshot`}
-                  className="w-full h-full object-cover"
-                />
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20`}></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-black bg-opacity-30 p-3 rounded-full">
-                    {project.icon}
-                  </div>
-                </div>
+              <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
+                {project.icon}
               </div>
               <div className="p-6">
                 <h3 className="font-poppins font-semibold text-xl mb-2">{project.title}</h3>

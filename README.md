@@ -55,6 +55,7 @@ The application will be available at `http://localhost:5000`
 ```
 ├── client/               # Frontend React application
 │   ├── src/
+|   |   ├── assets/       # has all the images and logo
 │   │   ├── components/   # Reusable UI components
 │   │   ├── pages/        # Page components
 │   │   ├── lib/          # Utility functions and query client
@@ -92,7 +93,7 @@ The application is configured for Replit deployment with optimized builds for bo
 
 - **Email**: priyanshumishra4070@gmail.com
 - **GitHub**: [@Priyanshu-coder-ai](https://github.com/Priyanshu-coder-ai)
-- **Portfolio**: Live demo available on Replit
+- **Portfolio**: Live demo available
 
 ---
 
